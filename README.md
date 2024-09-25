@@ -100,6 +100,7 @@ Contiene i dettagli sui videogiochi.
   - `storyline`: Trama del videogioco.
   - `release_date`: Data di rilascio.
   - `software_house_id`: Chiave esterna verso la tabella `SoftwareHouse` (relazione uno-a-molti).
+  - `pegi_rating_id`: Chiave esterna verso la tabella `pegi_rating` (relazione uno-a-molti).
 
 ### 3. Platform
 Elenca le piattaforme disponibili su cui possono essere rilasciati i videogiochi.
@@ -135,13 +136,6 @@ Contiene le classificazioni PEGI dei videogiochi (es. PEGI 7, PEGI 12, PEGI 18, 
 - **Colonne**:
   - `id`: Identificativo univoco (Primary Key).
   - `rating`: Descrizione della classificazione PEGI.
-
-### 8. Videogame_PEGI
-Relazione molti-a-molti tra `Videogame` e `PEGI_Rating`.
-
-- **Colonne**:
-  - `videogame_id`: Chiave esterna verso `Videogame`.
-  - `pegi_id`: Chiave esterna verso `PEGI_Rating`.
 
 ### 9. Tournament
 Gestisce le informazioni sui tornei internazionali di E-sports.
